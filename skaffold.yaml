@@ -1,0 +1,17 @@
+apiVersion: skaffold/v1
+kind: Config
+metadata:
+  name: laravel
+deploy:
+  kubectl:
+    manifests:
+    - nginx-configMap.yaml
+    - nginx-deployment.yaml
+    - nginx-service.yaml
+    - php-deployment.yaml
+    - php-service.yaml
+    - mysql-configMap.yaml
+    - mysql-secret.yaml
+    - mysql-deployment.yaml
+    - mysql-service.yaml
+    - deployment-ingress.yaml
